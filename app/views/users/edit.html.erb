@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Form Project for The Odin Project</h1><br><br>
+    <h2>User Edit Form</h2><br><br>
+    <%= form_with model: @user, method: "put" do |form| %>
+        <%= label(:user, :username, "Username: ") %>
+        <%= form.text_field :username, placeholder: "Example123" %><br><br>
+        <%= label(:user, :email, "Email: ") %>
+        <%= form.text_field :email, placeholder: "example@hotmail.com" %><br><br>
+        <%= label(:user, :password_digest, "Password: ") %>
+        <%= form.password_field :password_digest %><br><br>
+        <%= form.submit "Submit" %>
+    <% end %>
+   </body>
+</html>

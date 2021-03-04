@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <%= yield %>
+    <h1>Hi Ellie!</h1><br><br>
+    <h1>Form Project for The Odin Project</h1><br><br>
+    <h2>New User Form</h2><br><br>
+    <!--
+      <form method="post" action="/users" accept-charset="utf-8">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+        <label for="username">User Name: </label>
+        <input type="text" id="username" name="user[username]"><br><br>
+        <label for="email">Email: </label>
+        <input type="text" name="user[email]"><br><br>
+        <label for="password_digest">Password: </label>
+        <input type="password" id="password_digest" name="user[password_digest]"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+    -->
+    <!--
+      <%= form_tag('/users', method: 'post') do %>
+        <%= label_tag(:username, 'Username: ') %>
+        <%= text_field_tag(:username) %><br>
+        <%= label_tag(:email, 'Email: ') %>
+        <%= text_field_tag(:email) %><br>
+        <%= label_tag(:password_digest, 'Password: ') %>
+        <%= password_field_tag(:password_digest) %><br>
+        <%= submit_tag("Submit") %>
+      <% end %>
+    -->
+    
+    <%= form_with model: @user do |form| %>
+      <%= label(:username, "Username: ") %>
+      <%= form.text_field :username, placeholder: "Example123" %><br><br>
+      <%= label(:user, :email, "Email: ") %>
+      <%= form.text_field :email, placeholder: "example@hotmail.com" %><br><br>
+      <%= label(:user, :password_digest, "Password: ") %>
+      <%= form.password_field :password_digest %><br><br>
+      <%= form.submit "Submit" %>
+    <% end %>
+    
+    <br><br>
+    <h1>
+      Hello Ellie! This is our project site!<br>
+      uugdqeuiolkjjhfczaloip;[=-]<br>
+      etmhy<br>
+      eotemoytomotmitey<br>
+      easkjhvnbca     lkmbcxsawertyuio<br>
+      ELLIEkbjegkbjdbjkddddhghdddddddddddddddjhjkgnjkgjbkfdnjgkdmfkl;mg;dkflbmfglkbmgjnkbgh                 tjrinnnjiutnirgtnjgnnnnnnnnnnnnoiweroiriiofnioeroninofierhjbhvvhbvhhjbvbvbuhud
+      ihhhut bgfbjkgbbhjfghjbfghjfhjfghdhjjnsdfamk;fsamllaf,l;flsal,XKLNJDFJNHBBBBBBBBBBBBBBERHGTRUOIKERKIOWEKJRIJIRWEWENNNIURMUWEJURIJRUIEWUIIIIIWE;[=-]\'/./,'
+
+
+
+
+    </h1>
+
+  </body>
+</html>
